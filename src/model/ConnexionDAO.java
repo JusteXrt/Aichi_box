@@ -6,9 +6,10 @@ import java.sql.SQLException;
 
 public class ConnexionDAO {
     private static Connection connexion = null;
+    // Modification pour XAMPP qui utilise le port 3306 par défaut
     private static final String URL = "jdbc:mysql://localhost:3306/aichi_box?serverTimezone=UTC&useSSL=false";
     private static final String USERNAME = "root";
-    private static final String PASSWORD = "";
+    private static final String PASSWORD = ""; // Par défaut, pas de mot de passe sur XAMPP
 
     public static Connection getConnexion() {
         try {
